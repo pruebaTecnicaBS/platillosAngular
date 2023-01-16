@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,7 +10,7 @@ export class HomeComponent implements OnInit {
   urlIngredients = 'https://www.themealdb.com/api/json/v1/1/list.php?i=list';
   populares = [];
 
-  constructor(public http: HttpClient) {}
+  constructor(public http: HttpClient, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     let ingrediPopulares = Array.apply(null, { length: 10 }).map((x) =>

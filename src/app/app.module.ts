@@ -13,6 +13,8 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CardIngreComponent } from './card-ingre/card-ingre.component';
 import { FullMealComponent } from './full-meal/full-meal.component';
+import { LoginComponent } from './login/login.component';
+//import { CookieService } from 'ngx-cookie-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,7 @@ import { FullMealComponent } from './full-meal/full-meal.component';
     HomeComponent,
     CardIngreComponent,
     FullMealComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, RouterModule],
   providers: [],
