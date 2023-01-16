@@ -1,0 +1,9 @@
+<app-header></app-header>
+<div class="grid">
+  <h1>Lista de Favoritos</h1>
+  <app-card
+    [routerLink]="['/', 'listByIngredient', p?.strIngredient]"
+    [dataEntrante]="p"
+    *ngFor="let p of populares"
+  ></app-card>
+</div>

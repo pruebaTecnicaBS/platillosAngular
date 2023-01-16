@@ -1,7 +1,14 @@
 <div class="card">
   <img [src]="image" alt="" class="image" />
   <div class="wraper-text">
-    <div class="title">Lorem ipsum dolor sit.</div>
-    <div class="sub-title">Lorem, ipsum dolor.</div>
+    <div class="title">{{ dataEntrante?.strIngredient }}</div>
+    <div class="sub-title">
+      <div *ngIf="!dataEntrante.strDescription; else elseBlock">
+        {{ '--sin descripcion' }}
+      </div>
+      <ng-template #elseBlock>
+        {{ dataEntrante.strDescription.substring(0, 15) }}
+      </ng-template>
+    </div>
   </div>
 </div>

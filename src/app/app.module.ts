@@ -7,19 +7,26 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RecipieDetailComponent } from './recipie-detail/recipie-detail.component';
+import { ListIngredientComponent } from './list-ingredient/list-ingredient.component';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { CardIngreComponent } from './card-ingre/card-ingre.component';
+import { FullMealComponent } from './full-meal/full-meal.component';
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     HeaderComponent,
-    CardComponent
+    CardComponent,
+    RecipieDetailComponent,
+    ListIngredientComponent,
+    HomeComponent,
+    CardIngreComponent,
+    FullMealComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule, 
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, RouterModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

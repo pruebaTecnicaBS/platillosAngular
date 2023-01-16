@@ -1,0 +1,9 @@
+<h1>Platillos buscados por: {{ ingredient }}</h1>
+<div class="grid">
+  <h1>Lista de Favoritos</h1>
+  <app-card-ingre
+    [routerLink]="['/', 'fullMeal', l?.idMeal]"
+    [dataEntrante]="l"
+    *ngFor="let l of list"
+  ></app-card-ingre>
+</div>
