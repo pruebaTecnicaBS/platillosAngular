@@ -19,7 +19,7 @@ const routes: Routes = [
     component: FullMealComponent,
   },
   {
-    path: 'login12',
+    path: 'login1',
     component: LoginComponent,
   },
   {

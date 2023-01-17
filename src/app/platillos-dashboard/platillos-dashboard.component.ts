@@ -63,6 +63,7 @@ export class PlatillosDashboardComponent implements OnInit {
       (data) => {
         this.list = data;
         this.busqueda = req;
+        document.querySelector('.filter .input-search').value = '';
       }
     );
   }
@@ -72,10 +73,20 @@ export class PlatillosDashboardComponent implements OnInit {
       (data) => {
         this.list = data;
         this.busqueda = req;
+        document.querySelector('.filter .input-search').value = '';
       }
     );
   }
-  onEnter() {
-    console.log('key');
+  searchByName() {
+    let val = document.querySelector('.filter .input-search').value;
+    if (val != '') {
+      this.sendRequestList(
+        `https://www.themealdb.com/api/json/v1/1/search.php?s=${val}`,
+        (data) => {
+          this.list = data;
+          this.busqueda = val;
+        }
+      );
+    }
   }
 }
