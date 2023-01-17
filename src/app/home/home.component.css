@@ -1,7 +1,7 @@
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
+.carousel-item img {
+  max-height: 400px;
+  border-radius: 25px;
+}
+.carousel-item h5 {
+  font-size: 40px;
 }

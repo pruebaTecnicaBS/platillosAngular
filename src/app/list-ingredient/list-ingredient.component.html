@@ -1,9 +1,11 @@
-<h1>Platillos buscados por: {{ ingredient }}</h1>
-<div class="grid">
-  <h1>Lista de Platillos</h1>
-  <app-card-ingre
-    [routerLink]="['/', 'fullMeal', l?.idMeal]"
-    [dataEntrante]="l"
-    *ngFor="let l of list"
-  ></app-card-ingre>
+<div class="container">
+  <h1 class="display-5 fw-bold">Platillos buscados por: {{ ingredient }}</h1>
+  <div class="row">
+    <div class="col-4 my-3" *ngFor="let l of list">
+      <app-card-ingre
+        [routerLink]="['/', 'fullMeal', l?.idMeal]"
+        [dataEntrante]="l"
+      ></app-card-ingre>
+    </div>
+  </div>
 </div>

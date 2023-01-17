@@ -27,23 +27,5 @@ export class LoginComponent implements OnInit {
     this.subscription.unsubscribe();
   }
 
-  onLogin(): void {
-    /*if (this.loginForm.baseForm.invalid) {
-      return;
-    }*/
-
-    // const formValue = this.loginForm.baseForm.value;
-    this.subscription
-      .add
-      /* this.authSvc.login(formValue).subscribe((res) => {
-        if (res) {
-          this.router.navigate(['']);
-        }
-      })*/
-      ();
-  }
-
-  checkField(field: string): boolean {
-    // return this.loginForm.isValidField(field);
-  }
+ 
 }

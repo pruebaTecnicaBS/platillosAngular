@@ -1,7 +1,12 @@
-<div class="card">
-  <img [src]="dataEntrante?.strMealThumb" alt="" class="image" />
-  <div class="wraper-text">
-    <div class="title">{{ dataEntrante?.strMeal }}</div>
-    <div class="sub-title"></div>
+<div class="row align-items-md-stretch">
+  <div class="col-md-6">
+    <div class="bg-light rounded-3">
+      <div class="container-fluid py-2 text-center">
+        <div class="row">
+          <img [src]="dataEntrante?.strMealThumb" alt="" />
+        </div>
+        <h1 class="display-4">{{ dataEntrante?.strMeal }}</h1>
+      </div>
+    </div>
   </div>
 </div>

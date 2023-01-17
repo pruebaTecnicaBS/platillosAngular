@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 mat-dialog-title>Conoce nuestra recomendacion:</h1>
+  <h1 mat-dialog-subtitle class="text-center">{{ name }}</h1>
+
+  <div mat-dialog-content class="text-center">
+    <img [src]="img" alt="" [routerLink]="['/', 'fullMeal', id]" />
+  </div>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="dialogRef.close()" color="primary" class="close-btn">
+      Okays!
+    </button>
+  </div>
+</div>

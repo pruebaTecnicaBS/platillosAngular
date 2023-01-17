@@ -1,10 +1,76 @@
-<app-header></app-header>
-<div class="grid">
+<div class="container">
   <h1>Lista de Favoritos</h1>
-
-  <app-card
-    [routerLink]="['/', 'listByIngredient', p?.strIngredient]"
-    [dataEntrante]="p"
-    *ngFor="let p of populares"
-  ></app-card>
+ 
+  <div class="row">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                *ngFor="let c of carrousel; let i = index"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                attr.data-bs-slide-to="{{ i }}"
+                attr.aria-label="Slide {{ i }}"
+                class="{{ i == 0 ? 'active' : '' }}"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div
+                *ngFor="let c of carrousel; index as i"
+                class="carousel-item {{ i == 0 ? 'active' : '' }}"
+                [routerLink]="['/', 'fullMeal', c?.id]"
+              >
+                <img [src]="c.img" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="display-3">{{ c.name }}</h5>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Atras</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="row justify-content-center">
+            <div class="col-4 my-3" *ngFor="let p of populares" align="center">
+              <app-card
+                [routerLink]="['/', 'listByIngredient', p?.strIngredient]"
+                [dataEntrante]="p"
+              ></app-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

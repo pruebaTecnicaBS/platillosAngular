@@ -1,1 +1,5 @@
 
+
+.modal-open {
+  display: none !important;
+}
